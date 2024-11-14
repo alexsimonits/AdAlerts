@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.DetailsActivity"
+    tools:showIn="@layout/activity_details">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/details_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="$15.00" />
+
+        <TextView
+            android:id="@+id/details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_price"
+            tools:text="Pokemon Explorers Of Sky" />
+
+        <TextView
+            android:id="@+id/details_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/details_name"
+            app:layout_constraintTop_toBottomOf="@+id/details_name"
+            tools:text="MacDonald Ave, Belleville, ON K8N 3Y7, Canada" />
+
+        <TextView
+            android:id="@+id/details_posted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/details_location"
+            app:layout_constraintTop_toBottomOf="@+id/details_location"
+            tools:text="Posted 2 days ago" />
+
+        <TextView
+            android:id="@+id/details_visits_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/details_posted"
+            app:layout_constraintTop_toBottomOf="@+id/details_posted"
+            tools:text="4 page visits" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/details_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_visits_condition"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                tools:text="This is a rare Mewtwo card. It was given to me by the legendary Pokeman master." />
+        </androidx.cardview.widget.CardView>
+
+        <WebView
+            android:id="@+id/details_webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_cardView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

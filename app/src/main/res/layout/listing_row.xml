@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listing_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/listing_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/listing_noImageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="No image available"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/listing_image"
+                app:layout_constraintEnd_toEndOf="@+id/listing_image"
+                app:layout_constraintStart_toStartOf="@+id/listing_image"
+                app:layout_constraintTop_toTopOf="@+id/listing_image"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/listing_imageErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="-IMAGE ERROR-"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/listing_image"
+                app:layout_constraintEnd_toEndOf="@+id/listing_image"
+                app:layout_constraintStart_toStartOf="@+id/listing_image"
+                app:layout_constraintTop_toTopOf="@+id/listing_image"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/listing_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:padding="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/listing_guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:contentDescription="Photo" />
+
+            <TextView
+                android:id="@+id/listing_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/listing_image"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="$50.00" />
+
+            <TextView
+                android:id="@+id/listing_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/listing_location_posted"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/listing_image"
+                app:layout_constraintTop_toBottomOf="@+id/listing_price"
+                tools:text="Pokemon Mystery Dungeon Explorers of Sky" />
+
+            <TextView
+                android:id="@+id/listing_location_posted"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/listing_image"
+                tools:text="London / ON @ 25/08/2019" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/listing_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.37" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/listing_newListingIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/listing_cardView"
+        app:layout_constraintEnd_toStartOf="@+id/listing_cardView"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999"
+        app:srcCompat="@drawable/appicon_nobg_small"
+        tools:visibility="visible"
+        android:contentDescription="Alert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

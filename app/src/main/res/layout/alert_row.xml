@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alert_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="95dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/alert_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:selectableItemBackground"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/alert_updateDate"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Updated: 10:30pm, Feb 5" />
+
+            <TextView
+                android:id="@+id/alert_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/alert_facebook"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alert_updateDate"
+                tools:text="Pokemon Omega Ruby Nintendo 3DS" />
+
+            <TextView
+                android:id="@+id/alert_kijiji"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="Kijiji   "
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Kijiji   " />
+
+            <TextView
+                android:id="@+id/alert_ebay"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="Ebay   "
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/alert_kijiji"
+                tools:text="Ebay   " />
+
+            <TextView
+                android:id="@+id/alert_craigslist"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="Craigslist   "
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/alert_ebay"
+                tools:text="Craigslist   " />
+
+            <TextView
+                android:id="@+id/alert_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="Facebook   "
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/alert_craigslist"
+                tools:text="Facebook   "/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/alert_newListingIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Alert"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/alert_cardView"
+        app:layout_constraintEnd_toStartOf="@+id/alert_cardView"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999"
+        app:srcCompat="@drawable/appicon_nobg_small" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

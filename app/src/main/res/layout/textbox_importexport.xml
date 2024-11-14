@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/edittext_importexport"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/border2"
+        android:gravity="top|start"
+        android:hint="Paste alert data here"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+</LinearLayout>

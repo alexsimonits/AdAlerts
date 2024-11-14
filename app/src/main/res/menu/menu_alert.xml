@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.simonits.adalerts.activities.AlertActivity">
+    <item
+        android:id="@+id/action_cancel"
+        android:icon="@drawable/cancelicon"
+        android:title="Cancel"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_confirm"
+        android:icon="@drawable/confirmicon"
+        android:title="Confirm"
+        app:showAsAction="always" />
+</menu>

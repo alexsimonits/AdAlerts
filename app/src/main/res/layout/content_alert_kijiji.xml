@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_kijiji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kijiji"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:checked="true" />
+
+    <TextView
+        android:id="@+id/kLocationLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:text="Location"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_kijiji"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kDivider1"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner9"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner9"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner1"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner1"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner2"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner2"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/kKm"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="km"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/kKmLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner3"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/kKmLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="km from"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kKm"
+        app:layout_constraintEnd_toStartOf="@+id/kPostalZip"
+        app:layout_constraintTop_toTopOf="@+id/kKm"
+        app:layout_constraintVertical_bias="0.4"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/kPostalZip"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Postal/Zip"
+        android:inputType="textCapCharacters"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner3"
+        app:layout_constraintTop_toTopOf="@+id/kKm"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/kPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Price"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kTypeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner8"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:entries="@array/priceOptions"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner3"
+        app:layout_constraintTop_toBottomOf="@+id/kDivider3"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/kFrom"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:hint="from"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/kDash"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner4"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/kDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kTo"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner4"
+        app:layout_constraintStart_toStartOf="@+id/kSpinner4"
+        app:layout_constraintTop_toTopOf="@+id/kTo"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/kTo"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:ems="10"
+        android:hint="to"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/kDash"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner4"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/kCatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Category"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kLocationLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kPostalZip"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kDivider5"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner5"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner6"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/kTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Type"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kCatLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kSpinner7"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/kSpinner8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:entries="@array/kListingTypes"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kDivider7"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/kNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Title"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kPriceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kFrom"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/kIncludeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/include_all_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kIncludeSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/kIncludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/kIncludeSwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/kIncludeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kDivider9"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/kIncludeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/include_all_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/kIncludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/kIncludeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kIncludeSwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/kIncludeAnyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/include_any_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kIncludeAnySwitch"
+        app:layout_constraintEnd_toStartOf="@+id/kIncludeAnySwitch"
+        app:layout_constraintTop_toTopOf="@+id/kIncludeAnySwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/kIncludeAnySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kIncludeText"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/kIncludeAnyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/include_any_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/kIncludeAnySwitch"
+        app:layout_constraintStart_toStartOf="@+id/kIncludeAnyLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kIncludeAnySwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/kExcludeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/exclude_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kExcludeSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/kExcludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/kExcludeSwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/kExcludeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kIncludeAnyText"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/kExcludeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/exclude_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/kExcludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/kExcludeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kExcludeSwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <View
+        android:id="@+id/kDivider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner9"
+        app:layout_constraintStart_toStartOf="@+id/kLocationLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kLocationLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kPostalZip"
+        app:layout_constraintStart_toEndOf="@+id/kSpinner1"
+        app:layout_constraintTop_toTopOf="@+id/kDivider1"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner4"
+        app:layout_constraintStart_toStartOf="@+id/kPriceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kPriceLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider4"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#3C3E3F"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kTo"
+        app:layout_constraintStart_toEndOf="@+id/kSpinner4"
+        app:layout_constraintTop_toTopOf="@+id/kDivider3"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner5"
+        app:layout_constraintStart_toStartOf="@+id/kCatLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kCatLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider6"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#3C3E3F"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kSpinner7"
+        app:layout_constraintStart_toEndOf="@+id/kSpinner5"
+        app:layout_constraintTop_toTopOf="@+id/kDivider5"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider7"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kSpinner8"
+        app:layout_constraintStart_toStartOf="@+id/kTypeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kTypeLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider8"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#3C3E3F"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kSpinner8"
+        app:layout_constraintStart_toEndOf="@+id/kSpinner8"
+        app:layout_constraintTop_toTopOf="@+id/kDivider7"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider9"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/kIncludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/kNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/kNameLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/kDivider10"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#3C3E3F"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/kExcludeText"
+        app:layout_constraintStart_toEndOf="@+id/kIncludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/kDivider9"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

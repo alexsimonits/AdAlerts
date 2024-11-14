@@ -1,0 +1,53 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/drawable/active_dot.xml" value="0.357" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/drawable/splashscreen_background.xml" value="0.357" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_about.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_alert.xml" value="0.22871994801819362" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_details.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_facebook.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_faq.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_favourites.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_fullscreen.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_new_listings.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_tabbed.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/activity_welcome.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/alert_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_about.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_alert_craigslist.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_alert_ebay.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_alert_facebook.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_alert_kijiji.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_details.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_favourites.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/content_new_listings.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/fragment_tabbed.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/listing_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/pager_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/layout/settings_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/menu/menu_alert.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/menu/menu_favs_popup.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/menu/menu_fullscreen.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/menu/menu_popup.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/menu/menu_tabbed_popup.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alexs/Documents/AndroidStudioProjects/AdAlerts/app/src/main/res/xml/root_preferences.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="android.webkit.JavascriptInterface" />
+    </list>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,106 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:icon="@drawable/datafetch_icon"
+        android:key="@string/settings_data_fetch"
+        android:summary="Sets whether to check for new listings in the background or not"
+        android:title="Check for New Listings" />
+
+    <PreferenceCategory
+        app:title="Frequency">
+
+        <Preference
+            android:icon="@drawable/wifi_icon"
+            android:key="@string/settings_wifi_preference"
+            app:dependency="settings_data_fetch"
+            app:iconSpaceReserved="true"
+            app:title="WiFi" />
+
+        <Preference
+            android:icon="@drawable/mobiledata_icon"
+            android:key="@string/settings_mobile_preference"
+            app:dependency="settings_data_fetch"
+            app:iconSpaceReserved="true"
+            app:title="Mobile Data" />
+
+        <Preference
+            android:icon="@drawable/dnd_icon"
+            android:key="@string/settings_dnd_preference"
+            app:dependency="settings_data_fetch"
+            app:iconSpaceReserved="true"
+            app:title="Do Not Disturb" />
+
+        <Preference
+            android:icon="@drawable/charging_icon"
+            android:key="@string/settings_charging_preference"
+            app:dependency="settings_data_fetch"
+            app:iconSpaceReserved="true"
+            app:title="Charging" />
+
+        <Preference
+            android:icon="@drawable/battery_icon"
+            android:key="@string/settings_battery_preference"
+            app:dependency="settings_data_fetch"
+            app:iconSpaceReserved="true"
+            app:title="Battery Saver" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Notifications">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/notification_timing_entries"
+            android:entryValues="@array/notification_timing_values"
+            android:icon="@drawable/appsmall_icon"
+            android:key="@string/settings_notification_timing"
+            android:title="Notification Timing"
+            app:dependency="settings_data_fetch"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/notification_action_entries"
+            android:entryValues="@array/notification_action_values"
+            android:icon="@drawable/action_icon"
+            android:key="@string/settings_notification_action"
+            android:title="Notification Action"
+            app:dependency="settings_data_fetch"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/settings_facebook_label"
+        android:title="Facebook Account">
+
+        <Preference
+            android:icon="@drawable/logout_icon"
+            android:key="@string/settings_facebook_button"
+            app:summary="Log out of your Facebook account attached to this app"
+            app:title="Log Out" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/settings_importexport_label"
+        android:title="Import/Export">
+
+        <Preference
+            android:icon="@drawable/alert_config"
+            android:key="@string/settings_alertconfig_button"
+            app:summary="Import/export the alerts you've set up, from/to another device"
+            app:title="Alert Config" />
+
+        <Preference
+            android:icon="@drawable/starfullicon_black"
+            android:key="@string/settings_favourites_button"
+            app:summary="Import/export listings in your Favourites, from/to another device"
+            app:title="Favourites" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

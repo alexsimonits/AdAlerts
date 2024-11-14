@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_craigslist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Craigslist"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cLocationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:text="Location"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_craigslist"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/cSpinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cDivider1"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/cSpinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cSpinner1"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/cPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Price"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/cCatLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cSpinner5"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/cSpinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:entries="@array/priceOptions"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cDivider3"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/cFrom"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:hint="from"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/cDash"
+        app:layout_constraintTop_toBottomOf="@+id/cSpinner3"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/cDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cTo"
+        app:layout_constraintEnd_toEndOf="@+id/cSpinner3"
+        app:layout_constraintStart_toStartOf="@+id/cSpinner3"
+        app:layout_constraintTop_toTopOf="@+id/cTo"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/cTo"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:ems="10"
+        android:hint="to"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/cDash"
+        app:layout_constraintTop_toBottomOf="@+id/cSpinner3"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/cCatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Category"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/cLocationLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cSpinner2"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/cSpinner4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cDivider5"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/cSpinner5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cSpinner4"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/cNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Title"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/cPriceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cFrom"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/cIncludeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/include_all_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cIncludeSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/cIncludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/cIncludeSwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/cIncludeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cDivider7"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/cIncludeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/include_all_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/cIncludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/cIncludeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cIncludeSwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/cIncludeAnyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/include_any_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cIncludeAnySwitch"
+        app:layout_constraintEnd_toStartOf="@+id/cIncludeAnySwitch"
+        app:layout_constraintTop_toTopOf="@+id/cIncludeAnySwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/cIncludeAnySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cIncludeText"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/cIncludeAnyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/include_any_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/cIncludeAnySwitch"
+        app:layout_constraintStart_toStartOf="@+id/cIncludeAnyLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cIncludeAnySwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/cExcludeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/exclude_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cExcludeSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/cExcludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/cExcludeSwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/cExcludeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cIncludeAnyText"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/cExcludeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/exclude_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/cExcludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/cExcludeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cExcludeSwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <View
+        android:id="@+id/cDivider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/cSpinner1"
+        app:layout_constraintStart_toStartOf="@+id/cLocationLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cLocationLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/cDivider2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cSpinner2"
+        app:layout_constraintStart_toEndOf="@+id/cSpinner1"
+        app:layout_constraintTop_toTopOf="@+id/cDivider1"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/cDivider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/cSpinner3"
+        app:layout_constraintStart_toStartOf="@+id/cPriceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cPriceLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/cDivider4"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cTo"
+        app:layout_constraintStart_toEndOf="@+id/cSpinner3"
+        app:layout_constraintTop_toTopOf="@+id/cDivider3"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/cDivider5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/cSpinner4"
+        app:layout_constraintStart_toStartOf="@+id/cCatLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cCatLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/cDivider6"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cSpinner5"
+        app:layout_constraintStart_toEndOf="@+id/cSpinner5"
+        app:layout_constraintTop_toTopOf="@+id/cDivider5"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/cDivider7"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/cIncludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/cNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cNameLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/cDivider8"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#3C3E3F"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cExcludeText"
+        app:layout_constraintStart_toEndOf="@+id/cIncludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/cDivider7"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

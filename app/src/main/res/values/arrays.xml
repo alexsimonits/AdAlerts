@@ -1,0 +1,28 @@
+<resources>
+    <string-array name="notification_timing_entries">
+        <item>Send the notification after all alerts have been checked for new listings</item>
+        <item>Send the notification as alerts are being checked for new listings</item>
+    </string-array>
+
+    <string-array name="notification_timing_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="notification_action_entries">
+        <item>Open the Home screen of the app</item>
+        <item>Open the New Listings screen of the app</item>
+    </string-array>
+
+    <string-array name="notification_action_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="frequency_time_types">
+        <item>Minutes</item>
+        <item>Hours</item>
+        <item>Days</item>
+        <item>Weeks</item>
+    </string-array>
+</resources>

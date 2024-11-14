@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fLogInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Log In"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fLogInLabel"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/fLocationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Location"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fLogInButton"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/fLocationText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:padding="8dp"
+        android:text='Uses the same Location and Radius that you have set-up on your account. This can be changed in the Marketplace section of the official Facebook app or www.facebook.com.'
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fDivider1"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/fPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Price"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/fCatLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fSpinner4"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/fSpinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:entries="@array/priceOptions"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fDivider3"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/fFrom"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:hint="from"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/fDash"
+        app:layout_constraintTop_toBottomOf="@+id/fSpinner2"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/fDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fTo"
+        app:layout_constraintEnd_toEndOf="@+id/fSpinner2"
+        app:layout_constraintStart_toStartOf="@+id/fSpinner2"
+        app:layout_constraintTop_toTopOf="@+id/fTo"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/fTo"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:ems="10"
+        android:hint="to"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/fDash"
+        app:layout_constraintTop_toBottomOf="@+id/fSpinner2"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/fCatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Category"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/fLocationLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fLocationText"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/fSpinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fDivider5"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/fSpinner4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fSpinner3"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/fNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Title"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/fPriceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fFrom"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/fIncludeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/include_all_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fIncludeSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/fIncludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/fIncludeSwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/fIncludeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fDivider7"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/fIncludeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/include_all_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/fIncludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/fIncludeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fIncludeSwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/fIncludeAnyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/include_any_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fIncludeAnySwitch"
+        app:layout_constraintEnd_toStartOf="@+id/fIncludeAnySwitch"
+        app:layout_constraintTop_toTopOf="@+id/fIncludeAnySwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/fIncludeAnySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fIncludeText"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/fIncludeAnyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/include_any_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/fIncludeAnySwitch"
+        app:layout_constraintStart_toStartOf="@+id/fIncludeAnyLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fIncludeAnySwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/fExcludeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/exclude_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fExcludeSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/fExcludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/fExcludeSwitch"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/fExcludeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:theme="@style/SwitchCompatTheme"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fIncludeAnyText"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/fExcludeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/exclude_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/fExcludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/fExcludeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fExcludeSwitch"
+        tools:visibility="visible"
+        android:autofillHints="" />
+
+    <View
+        android:id="@+id/fDivider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/fLocationText"
+        app:layout_constraintStart_toStartOf="@+id/fLocationLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fLocationLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/fDivider2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fLocationText"
+        app:layout_constraintStart_toEndOf="@+id/fLocationText"
+        app:layout_constraintTop_toTopOf="@+id/fDivider1"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/fDivider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/fSpinner2"
+        app:layout_constraintStart_toStartOf="@+id/fPriceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fPriceLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/fDivider4"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fTo"
+        app:layout_constraintStart_toEndOf="@+id/fSpinner2"
+        app:layout_constraintTop_toTopOf="@+id/fDivider3"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/fDivider5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/fSpinner3"
+        app:layout_constraintStart_toStartOf="@+id/fCatLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fCatLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/fDivider6"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#3C3E3F"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fSpinner4"
+        app:layout_constraintStart_toEndOf="@+id/fSpinner3"
+        app:layout_constraintTop_toTopOf="@+id/fDivider5"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/fDivider7"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#646464"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/fIncludeSwitch"
+        app:layout_constraintStart_toStartOf="@+id/fNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/fNameLabel"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/fDivider8"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#3C3E3F"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fExcludeText"
+        app:layout_constraintStart_toEndOf="@+id/fIncludeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/fDivider7"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/fLogInLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text='A Facebook account is required for Facebook Marketplace alerts to work.'
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_facebook"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

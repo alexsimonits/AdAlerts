@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_item_kijiji"
+        android:title="Open In Kijiji"
+        android:visible="false" />
+    <item
+        android:id="@+id/fragment_item_ebay"
+        android:title="Open In Ebay"
+        android:visible="false" />
+    <item
+        android:id="@+id/fragment_item_craigslist"
+        android:title="Open In Craigslist"
+        android:visible="false" />
+    <item
+        android:id="@+id/fragment_item_facebook"
+        android:title="Open In Facebook"
+        android:visible="false" />
+    <item
+        android:id="@+id/fragment_item_addFav"
+        android:title="Add To Favourites"
+        android:visible="false" />
+    <item
+        android:id="@+id/fragment_item_removeFav"
+        android:title="Remove From Favourites"
+        android:visible="false" />
+    <item
+        android:id="@+id/fragment_item_spam"
+        android:title="Mark As Spam" />
+</menu>
